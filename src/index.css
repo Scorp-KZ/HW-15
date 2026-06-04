@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+}
+
+html { overflow-y: scroll; }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f8f9fa;
+    color: #222;
+    transition: 0.2s;
+}
+
+.app-content { flex: 1; }
+
+.dark-theme {
+    background: #111827;
+    color: #f9fafb;
+}
+
+.dark-theme .featured-card,
+.dark-theme .book-card,
+.dark-theme .contacts-info,
+.dark-theme .contacts-map,
+.dark-theme .about-card,
+.dark-theme .favorites-empty,
+.dark-theme .pd-image img,
+.dark-theme .error-page,
+.dark-theme .error-featured {
+    background: #1f2937;
+    color: #f9fafb;
+    border-color: #374151;
+}
+
+.dark-theme p,
+.dark-theme .book-subtitle,
+.dark-theme .hero p,
+.dark-theme .hero-subtext,
+.dark-theme .pd-subtitle,
+.dark-theme .pd-desc p,
+.dark-theme .contacts-intro {
+    color: #d1d5db;
+}
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme .contacts-section h2,
+.dark-theme .contacts-info h3,
+.dark-theme .contacts-map h3 {
+    color: #f9fafb;
+}

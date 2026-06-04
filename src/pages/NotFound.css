@@ -1,0 +1,41 @@
+.notfound-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+    color: #333;
+}
+
+.notfound-code {
+    font-size: 6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #282c34;
+}
+
+.notfound-emoji {
+    font-size: 15rem;
+    margin-bottom: 20px;
+    color: #888;
+}
+
+.notfound-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.notfound-link {
+    text-decoration: none;
+    color: white;
+    background: #4b5055;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+    .notfound-link:hover {
+        background: #1a252f;
+        color: #ffd700;
+    }
