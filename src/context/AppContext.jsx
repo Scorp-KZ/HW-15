@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
 const AppContext = createContext(null);
 
@@ -19,7 +19,11 @@ export function AppProvider({ children }) {
 
     const toggleTheme = () => setIsDarkTheme(prev => !prev);
 
-    const isFavorite = bookId => favorites.some(book => book.id === bookId);
+
+    const isFavorite = useCallback(
+        bookId => favorites.some(book => book.id === bookId),
+        [favorites]
+    );
 
     const toggleFavorite = book => {
         setFavorites(prevFavorites => {
@@ -37,7 +41,7 @@ export function AppProvider({ children }) {
         favorites,
         isFavorite,
         toggleFavorite,
-    }), [isDarkTheme, favorites]);
+    }), [isDarkTheme, favorites, isFavorite]);
 
     return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
